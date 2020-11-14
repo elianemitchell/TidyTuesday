@@ -6,7 +6,7 @@ visualizing data for others to see. Feedback is always welcomed. :)
 
 ## Pew Research Smartphone Adoption Data
 
-![Phone Plot]
+[Phone Plot]
 (https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Phone%20Plot.jpeg)
 
 ***
