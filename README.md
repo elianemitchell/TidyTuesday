@@ -1,8 +1,7 @@
 # #TidyTuesday Contributions
 My code and visualizations for #TidyTuesday, a weekly social project on Twitter created by the r4ds online learning community. 
 
-After begininng to concertedly teach myself R in August of 2020, I decided to finally use my Twitter account and try my hand at 
-visualizing data for others to see. Feedback is always welcomed. :)
+After beginning my concerted efforts to learn R in August of 2020, I decided two months later to try my hand at visualizing data for others to see. Feedback is always welcomed. :)
 
 ## Pew Research Smartphone Adoption Data
 
