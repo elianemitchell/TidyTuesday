@@ -11,5 +11,5 @@ After beginning my concerted efforts to learn R in August of 2020, I decided two
 
 ## Great American Beer Festival Competition Data
 
-![./mytidytuesdaycode/Tidy Tuesday Beer Awards plot.jpeg](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Beer%20Awards%20plot.jpeg)
+![./mytidytuesdaycode/Tidy Tuesday Beer Awards.png](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Beer%20Awards.png)
 
