@@ -49,13 +49,18 @@ library(crayon)
 # 3. Create scatterplot
 stanford_graph <- ggplot(stanford_data, aes(x = year, y = full_percent)) + 
                   geom_line(aes(color = conference)) +
-                  geom_image(aes(image = image), size = 0.02) +
-                  ggtitle("Stanford Women's Basketball Performance at NCAA Tournament Over Time") +
-                  scale_x_continuous(name = "Year of Tournament", breaks = seq(1990, 2020, 4)) +
-                  scale_y_continuous(name = "Percent of Games Won", breaks = seq(60, 100, 5)) +
+                  geom_image(aes(image = image), size = 0.04) +
+                  scale_x_continuous(breaks = seq(1990, 2020, 4)) +
+                  scale_y_continuous(breaks = seq(60, 100, 5)) +
                   scale_colour_manual(values = color_conference) +
-                  theme_bw() +
-                  theme(text = element_text(family = "Khmer Sangam MN", size = 12))
+                  theme_classic() +
+                  labs(title = "Stanford Women's Basketball Team Performance",
+                       subtitle = "Their Winning Percentage at the NCAA Over Time",
+                       col = "Conference") +
+                  theme(axis.title.x = element_blank(), 
+                        axis.title.y = element_blank(),
+                        text = element_text(family = "Verdana", size = 12),
+                        plot.title = element_text(size = 12,face ="bold"))
 
 # 4. Add labels for each point and labels for when the women's basketball team
 # won the championship that year
@@ -65,8 +70,8 @@ Champ_percents <- filter(stanford_data, tourney_finish == "Champ")
 
 # b. Draw graph with labels 
 stanford_graph + geom_text(data = stanford_data, aes(x = year, y = full_percent, label=labels),
-                          size = 2, nudge_x = 0.5, nudge_y = 0.75) +
-                          annotate("text", x = 1990, y = 96.5, label = "CHAMPIONS!", size = 1.5) +
-                          annotate("text", x = 1992, y = 90.4, label = "CHAMPIONS!", size = 1.5)
+                          size = 2, nudge_x = 0.78, nudge_y = 0.78) +
+                          annotate("text", x = 1990, y = 98.5, label = "CHAMPIONS", size = 1.5) +
+                          annotate("text", x = 1992, y = 92.4, label = "CHAMPIONS", size = 1.5) 
 
 
