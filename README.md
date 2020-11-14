@@ -6,7 +6,8 @@ visualizing data for others to see. Feedback is always welcomed. :)
 
 ## Pew Research Smartphone Adoption Data
 
-![](/mytidytuesdaycode/Tidy Tuesday Phone Plot.jpeg)
+![./mytidytuesdaycode/main/Tidy Tuesday Beer Awards plot.jpeg]
+(https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Phone%20Plot.jpeg)
 
 ---
 
