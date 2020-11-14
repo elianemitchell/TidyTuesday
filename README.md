@@ -3,18 +3,18 @@ My code and visualizations for #TidyTuesday, a weekly social project on Twitter 
 
 After beginning my concerted efforts to learn R in August of 2020, I decided two months later to try my hand at visualizing data for others to see. Feedback is always welcomed. :)
 
-## Pew Research Smartphone Adoption Data
+## Week 46: Pew Research Smartphone Adoption Data
 
 ![./mytidytuesdaycode/Tidy Tuesday Phone Plot.jpeg](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Phone%20Plot.jpeg)
 
 ---
 
-## Great American Beer Festival Competition Data
+## Week 43: Great American Beer Festival Competition Data
 
 ![./mytidytuesdaycode/Tidy Tuesday Beer Awards.png](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Beer%20Awards.png)
 
 ---
 
-## NCAA Women's Basketball
+## Week 41: NCAA Women's Basketball Data
 
 ![./mytidytuesdaycode/Tidy Tuesday Women's Basketball.png](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Women's%20Basketball.png)
