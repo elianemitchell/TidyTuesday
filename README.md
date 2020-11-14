@@ -5,7 +5,7 @@ After begininng to concertedly teach myself R in August of 2020, I decided to fi
 visualizing data for others to see. Feedback is always welcomed. :)
 
 ## Pew Research Smartphone Adoption Data
-![./mytidytuesdaycode/Tidy Tuesday Phone Plot.png]
+![./mytidytuesdaycode/main/Tidy Tuesday Phone Plot.png]
 (https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Phone%20Plot.png)
 
 
@@ -13,3 +13,4 @@ visualizing data for others to see. Feedback is always welcomed. :)
 I chose New York, my home state :)
 
 ![./mytidytuesdaycode/Tidy Tuesday Beer Awards plot.jpeg](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Beer%20Awards%20plot.jpeg)
+
