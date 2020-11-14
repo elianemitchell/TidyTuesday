@@ -13,3 +13,8 @@ After beginning my concerted efforts to learn R in August of 2020, I decided two
 
 ![./mytidytuesdaycode/Tidy Tuesday Beer Awards.png](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Beer%20Awards.png)
 
+---
+
+## NCAA Women's Basketball
+
+![./mytidytuesdaycode/Tidy Tuesday Women's Basketball.png](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Women's%20Basketball.png)
