@@ -40,4 +40,7 @@ facet_plot <- ggplot(experiment, aes(x = medal, y=n, fill=medal)) + geom_bar(sta
        subtitle = "5 Most Awarded NY Cities for GABF Medals (1987-2020)",
        caption = "Created by @eliane_mitchell | #TidyTuesday Week 43 | Data: Great American Beer Festival") +
   theme(axis.title.x = element_blank(),
-      axis.title.y = element_blank())
+        axis.title.y = element_blank(),
+        legend.position = "none")
+
+ggsave("Tidy Tuesday Beer Awards.png")
