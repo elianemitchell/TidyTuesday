@@ -5,7 +5,7 @@ After begininng to concertedly teach myself R in August of 2020, I decided to fi
 visualizing data for others to see. Feedback is always welcomed. :)
 
 ## Pew Research Smartphone Adoption Data
-![./mytidytuesdaycode/main/Tidy Tuesday Phone Plot.png]
+![./mytidytuesdaycode/Tidy Tuesday Phone Plot.jpeg]
 (https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Phone%20Plot.jpeg)
 
 
