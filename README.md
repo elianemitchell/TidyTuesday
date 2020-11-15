@@ -17,4 +17,4 @@ After beginning my concerted efforts to learn R in August of 2020, I decided two
 
 ## Week 41: NCAA Women's Basketball Data
 
-![./mytidytuesdaycode/Tidy Tuesday Women's Basketball.png](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Women's%20Basketball.png)
+![./mytidytuesdaycode/New Tidy Tuesday Basketball Plot 11-15.png](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/New%20Tidy%20Tuesday%20Basketball%20Plot%2011-15.png)
