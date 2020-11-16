@@ -5,7 +5,7 @@ After beginning my concerted efforts to learn R in August of 2020, I decided two
 
 ## Week 46: Pew Research Smartphone Adoption Data
 
-![./mytidytuesdaycode/Tidy Tuesday Phone Plot.jpeg](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Phone%20Plot.jpeg)
+![./mytidytuesdaycode/Tidy Tuesday Phone Plot 2.0.jpeg](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Phone%20Plot%202.0.png)
 
 ---
 
