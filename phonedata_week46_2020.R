@@ -24,8 +24,8 @@ us_data <- inner_join(us_mobile, select(us_landline, year, landline_subs))
 # plot line graph
 plot <- ggplot(us_data, aes(x = year)) + 
   # add images and place them 
-  annotation_custom(image2, xmin=2010, xmax=2022, ymin=105, ymax=117) +
-  annotation_custom(image1, xmin=2010, xmax=2022, ymin=22, ymax=34) +
+  annotation_custom(image2, xmin=2016, xmax=2018, ymin=116, ymax=128) +
+  annotation_custom(image1, xmin=2016, xmax=2018, ymin=32, ymax=44) +
   # draw lines for each kind of phone subscription
   geom_line(aes(y = landline_subs, color = "blue", size = 0.10), show.legend = FALSE) +
   geom_line(aes(y = mobile_subs, color = "red", size = 0.10), show.legend = FALSE) +
