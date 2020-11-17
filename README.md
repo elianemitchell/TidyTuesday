@@ -11,7 +11,7 @@ After beginning my concerted efforts to learn R in August of 2020, I decided two
 
 ## Week 43: Great American Beer Festival Competition Data
 
-![./mytidytuesdaycode/Tidy Tuesday Beer Awards.png](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Beer%20Awards.png)
+![./mytidytuesdaycode/Tidy Tuesday Beer Awards 2.0.png](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Beer%20Awards%202.0.png)
 
 ---
 
