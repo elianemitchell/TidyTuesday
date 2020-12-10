@@ -3,6 +3,10 @@ My code and visualizations for #TidyTuesday, a weekly social project on Twitter 
 
 After beginning my concerted efforts to learn R in August of 2020 with DataCamp, I decided two months later to try my hand at visualizing data for others to see. Feedback is always welcomed!
 
+## Week 50: BBC Women of 2020 Data
+
+![./mytidytuesdaycode/Tidy Tuesday BBC Women 2020.png](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20BBC%20Women%202020.png)
+
 ## Week 46: Pew Research Smartphone Adoption Data
 
 ![./mytidytuesdaycode/Tidy Tuesday Phone Plot 2.0.jpeg](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Phone%20Plot%202.0.png)
