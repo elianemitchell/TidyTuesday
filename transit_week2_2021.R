@@ -1,7 +1,5 @@
 library(tidyverse)
 library(showtext)
-install.packages("showtext") # for showing google font
-font_add_google()
 font_add_google("Helvetica", "linotype")
 showtext_auto()
 
