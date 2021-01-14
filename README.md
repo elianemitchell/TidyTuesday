@@ -3,6 +3,12 @@ My code and visualizations for #TidyTuesday, a weekly social project on Twitter 
 
 After beginning my concerted efforts to learn R in August of 2020 with DataCamp, I decided two months later to try my hand at visualizing data for others to see. Feedback is always welcomed!
 
+## Week 2: Transit Costs Project
+
+![./](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Transit%20Plot.png)
+
+---
+
 ## Week 51: American Ninja Warrior Data
 
 ![,/](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Warrior.png)
