@@ -11,7 +11,7 @@ After beginning my concerted efforts to learn R in August of 2020 with DataCamp,
 
 ## Week 51: American Ninja Warrior Data
 
-![,/](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Warrior.png)
+![,/](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Week%2051%202020%20American%20Ninja%20Warrior/Tidy%20Tuesday%20Ninja%20Warrior%20plot.png)
 
 ---
 
