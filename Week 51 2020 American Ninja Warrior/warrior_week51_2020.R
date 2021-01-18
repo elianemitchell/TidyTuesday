@@ -50,4 +50,5 @@ icon <- grid::rasterGrob(running_icon, interpolate=TRUE)
 
 # Add icon to plot using cowplot functions
 h <- ggdraw(p)
-h + draw_grob(icon, 0.35, 0.375, 0.24, 0.10)
+h + draw_grob(icon, 0.21, 0.42, 0.30, 0.06)
+
