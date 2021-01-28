@@ -3,6 +3,12 @@ My code and visualizations for #TidyTuesday, a weekly social project on Twitter 
 
 After beginning my concerted efforts to learn R in August of 2020 with DataCamp, I decided two months later to try my hand at visualizing data for others to see. Feedback is always welcomed!
 
+## Week 4: Kenya Census
+
+![./](https://raw.githubusercontent.com/elianemitchell/TidyTuesday/main/Week%204%202021%20Kenya/Tidy%20Tuesday%20Kenya%20Disability.png)
+
+---
+
 ## Week 2: Transit Costs Project
 
 ![./](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Transit%20Plot.png)
