@@ -7,6 +7,8 @@ library(maptools)
 library(rgdal)
 library(rKenyaCensus)
 
+### clean code for this coming soon!
+
 households <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-01-19/households.csv')
 population <- households %>% select(County, Population) #Only realized later that this could directly be pulled from rKenyaCensus
 disability <- V4_T2.27
