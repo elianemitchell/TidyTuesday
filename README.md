@@ -5,7 +5,7 @@ After beginning my concerted efforts to learn R in August of 2020 with DataCamp,
 
 ## Week 4: Kenya Census
 
-![./](https://raw.githubusercontent.com/elianemitchell/TidyTuesday/main/Week%204%202021%20Kenya/Tidy%20Tuesday%20Kenya%20Disability.png)
+![./](https://raw.githubusercontent.com/elianemitchell/TidyTuesday/main/Week%204%202021%20Kenya/final%20Kenya%20plot.png)
 
 ---
 
