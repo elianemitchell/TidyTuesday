@@ -1,187 +1,82 @@
-#Packages 
-library(ggtext)
+# PACKAGES 
 library(tidyverse)
 library(sf)
-library(tmap)
-library(maptools)
-library(rgdal)
 library(rKenyaCensus)
+library(cowplot)
 
-### clean code for this coming soon!
-
-households <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-01-19/households.csv')
-population <- households %>% select(County, Population) #Only realized later that this could directly be pulled from rKenyaCensus
-disability <- V4_T2.27
- 
-# Read in Shape File
-kenya <- read_sf("County.shp")
-
-# Rename COUNTY column in country2 to County, in order to match with population
-kenya2 <- rename(kenya, County = Name)
-
-# Create dataframe that now adds the population numbers to the geosp dataframe
-# This doesn't work because it deletes the geo data from the country3 df 
-#plot <- merge(population, country3, by = "County", all = TRUE)
-#plot_tryagain <- merge(population, kenya2, by = "County", all = TRUE)
-
-# Leaves the geoms which is more important... this uses TRY, so don't use
-new_pop <- population %>% mutate(County = case_when(County == "TanaRiver" ~ "Tana River",
-                                            County == "UasinGishu" ~ "Uasin Gishu",
-                                            County == "WestPokot" ~ "West Pokot",
-                                            County == "TransNzoia" ~ "Trans Nzoia",
-                                            County == "NairobiCity" ~ "Nairobi",
-                                            County == "Murang'a" ~ "Murang?a",
-                                            County == "HomaBay" ~ "Homa Bay", 
-                                            TRUE ~ County))
-                                            
-sumDisability <- disability %>% filter(AdminArea == "County") %>%
-  mutate(sumDisability = sum(Vision_Total, Hearing_Total, Mobility_Total,
-         Cognition_Total, SelfCare_Total, Communication_Total),
-         County = str_to_title(County)) %>%
-  select(County, sumDisability) %>%
-  filter(County != "Kenya")
-  
-see <- merge(sumDisability, pop, by="County", all.y = TRUE) %>%
-  mutate(prop = sumDisability/Population)
-
-BEST <- st_as_sf(merge(see, new_df3, by = "County", all.y = TRUE))
-
-done <- see %>% mutate(prop = sumDisability/Population)
-
-pop <- population %>% mutate(County = case_when(County == "TanaRiver" ~ "Tana River",
-                                            County == "UasinGishu" ~ "Uasin Gishu",
-                                            County == "WestPokot" ~ "West Pokot",
-                                            County == "TransNzoia" ~ "Trans Nzoia",
-                                            County == "NairobiCity" ~ "Nairobi City",
-                                            County == "HomaBay" ~ "Homa Bay", 
-                                            TRUE ~ County))
-population <- population %>% filter(County != "Kenya")
-
-next_127 <- see %>% mutate(above_below = mean(prop) - prop)
-
-sum(BEST127$sumDisability)/sum(BEST127$Population)
-mean(BEST127$prop)
-
-overall_prop <- sum(next_127$sumDisability) / sum(next_127$Population)
-
-next_127 <- see %>% mutate(percent_diff = ((prop - overall_prop) / overall_prop)*100)
-next_128 <- see %>% mutate(percent_dis = prop * 100,
-                           percent_diff = percent_dis - (overall_prop *100)) 
-
-BEST128 <- BEST128 %>% select(-Disability, prop.x, prop.y)
-
-
-
-max(next_127$prop) *100
-min(next_127$prop) *100
-overall_prop *100
-
-bla <- see %>% mutate(sd = sqrt((prop - (mean(prop)^2)) / 46))
-bla %>% ggplot(aes(x = sd)) + geom_histogram()
-
-  
-BEST128 <- st_as_sf(merge(next_128, new_df3, by = "County"))
-
+library(showtext)
 font_add_google("Alfa Slab One", "Alice")
-showtext_auto()
-library(ggtext)
-       
-colors <- c("#052955","white","#ae9c45")    
-
-BEST128 %>% 
-  ggplot() +
-  geom_sf(aes(geometry = geometry, fill = percent_diff), lwd = 0, color = "white") +
-  theme_void() +
-  scale_fill_gradient2(legend_title,
-                      low = "#052955", 
-                      mid = "white",
-                      high = "#ae9c45",
-                      limits = c(-2.0, 3.18),
-                      labels = c("0.88%", "", "2.83%", " ", " ", "5.96%")) +
-  labs(title = "Kenya Disability Rate by County",
-       subtitle = "Over 1 million Kenyans (2.83%) are afflicted with impairments to their\nsight, vision, cognition, mobility, ability to communicate, or ability to self-care.",
-       caption = "Created by @elianemitchll | Source rKenyaCensus | #TidyTuesday Week 4") +
-  guides(fill = guide_legend(barwidth = 1, barheight = 4, reverse=TRUE)) +
-  theme(plot.title = element_text(family = "Alice", face = "bold"),
-        plot.subtitle = element_text(family = "Roboto Condensed", size = 7, lineheight = 1.2),
-        legend.direction = "vertical",
-        legend.position = c(1.2, 0.56),
-        legend.title = element_blank(),
-        plot.caption = element_text(size = 6, family = "Roboto Condensed", vjust=5, hjust=0.5),
-        legend.text = element_text(family = "Roboto Condensed")) 
-
-ggsave("Tidy Tuesday Kenya Disability.png")
-
- library(ggtext)
-
-sum(next_128$sumDisability)
-
-legend_title <- "Percent Difference"
-
 font_add_google("Roboto", "Roboto Condensed")
+showtext_auto()
 
-# Darker colors show more extreme values from the mean
+# PREP: PULL IN DATA
+# pull data from rKenyaCensus and TidyTuesday Github
+disability <- V4_T2.27
+households <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-01-19/households.csv') #why not just use TidyTuesday's clean data :3
 
-max(next_128$percent_diff)
-min(next_128$percent_diff)
+# read in map and lower case county names. Map downloaded from: https://www.igismap.com/kenya-shapefile-download-boundary-line-administrative-state-and-polygon/
+map <- KenyaCounties_SHP %>%
+  sf::st_as_sf() %>%
+  mutate(County = str_to_title(County))
 
+# WRANGLE DATA
+# Change households data to contain only columns needed and modify county names
+population <- households %>% select(County, Population) %>%
+  filter(County != "Kenya") %>%
+  mutate(County = case_when(County == "TanaRiver" ~ "Tana River",
+                            County == "UasinGishu" ~ "Uasin Gishu",
+                            County == "WestPokot" ~ "West Pokot",
+                            County == "TransNzoia" ~ "Trans Nzoia",
+                            County == "NairobiCity" ~ "Nairobi City",
+                            County == "HomaBay" ~ "Homa Bay", 
+                            TRUE ~ County))
 
-BEST %>%
+# add up all reported disabilities and lowercase county names
+sum_disabilities <- disability %>% filter(AdminArea == "County") %>%
+  mutate(sumDisability = sum(Vision_Total, Hearing_Total, Mobility_Total, 
+                             Cognition_Total, SelfCare_Total, Communication_Total),
+         County = str_to_title(County)) %>%
+  select(County, sumDisability)
+
+# merge sum disability with population and calculate per 1000
+first_merge <- merge(sum_disabilities, population, by="County", all.y = TRUE) %>%
+  mutate(per_thousand = (sumDisability/Population)*1000,
+         above_below = per_thousand - median(per_thousand)) %>%
+  select(County, sumDisability, Population, per_thousand, above_below)
+
+# merge merged data (between sum disabilities and population) with map data
+plot_df <- st_as_sf(merge(first_merge, map, by="County"))
+
+# MAP TIME
+# make the map
+plot <- plot_df %>% 
   ggplot() +
-  geom_sf(aes(geometry = geometry, fill = prop.x)) +
+  geom_sf(aes(geometry = geometry, fill = above_below), lwd = 0) +
   theme_void() +
-  scale_fill_gradient(low = "#fbd0d2", high = "#ee1f25")
 
-# Another option: above and below?
+# set colors, breaks
+  scale_fill_gradient2(
+    low = "#009e73", 
+    mid = "floralwhite",
+    high = "#cc79a7",
+    limits = c(-20, 40),
+    breaks = seq(-20, 40, by = 20),
+    labels = c("-20", "0 (median)", "20+", "40+")) +
 
-class(see$prop)
+# write labels
+  labs(title = "Kenya: Reported Disabilities by County",
+       subtitle = "Reported disabilities per 1,000 people. Reported disabilities include impairments to \ncognition, vision, hearing, mobility, ability to communicate, and ability to self-care.\n \nCounties are shaded based on distance from the median reported disabilities per\n1,000 people (the median lies in Bungoma).\n \nSome people have more than one disability so the actual number of people with\ndisabilities would be lower than this number.",
+       caption = "Created by @elianemitchll | Source rKenyaCensus | #TidyTuesday Week 4") +
 
+# final theme things(font, positioning
+  theme(plot.title = element_text(family = "Alice", face = "bold"),
+        plot.subtitle = element_text(family = "Roboto Condensed", size = 7, lineheight = 1),
+        legend.direction = "vertical",
+        legend.position = c(1.1, 0.56),
+        legend.title = element_blank(),
+        plot.caption = element_text(size = 6, family = "Roboto Condensed", vjust=5, hjust=1.25),
+        legend.text = element_text(family = "Roboto Condensed", size =6))
 
-View(population %>% arrange(County))
-View(sumDisability %>% arrange(County))
-population %>% 
-merge(sumDisability, population, by = "County", all.y = TRUE)
-
-  pivot_longer(-c(County), names_to = "Disability") %>%
-  mutate(sum = sum(value),
-         prop = value/sum(value),
-         County = str_to_title(County))
-
-dis_pop <- merge(disWithAllProps, population, by = "County", all.y = TRUE)
-
-
-disability_data %>%
-  #group_by(County) %>%
-  str_to_lower(County)
-  
-
-kenya_graph_data <- kenya2 %>% mutate(County = str_to_title(County))
-
-## MOST UPDATED JAN 27TH
-new_df2 <- st_as_sf(merge(disWithAllProps, kenya_graph_data, by = "County", all.y = TRUE))
-new_df3 <- new_df2 %>% mutate(County = case_when(County == "Nairobi" ~ "Nairobi City",
-                                County == "Murang?A" ~ "Murang'a",
-                                TRUE ~ County))
-done_df <- st_as_sf(merge(disability_data_noMobility, new_df3, by = "County", all.y = TRUE))
-
-done_df %>%
-  ggplot() +
-  geom_sf(aes(geometry = geometry, fill = "prop.x", color = Disability.x)) +
-  theme_void() +
-  #paletteer::scale_fill_paletteer_c("scico::tokyo") +
-  #scale_color_gradient(low = "transparent", high = "white") +
-  theme_void() +
-  theme(
-  panel.background = element_rect(fill = "black"),
-  plot.background = element_rect(fill = "black"))
-
-
-  
-
-  
-
-
-
-
+ggsave("Kenya plot.png")
 
 
