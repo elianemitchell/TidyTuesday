@@ -66,18 +66,18 @@ p3 <- p2 + annotation_custom(id_icon, xmin=2.5, xmax=3.5, ymin=16, ymax=21) +
   annotation_custom(allwomen_icon, xmin=4.5, xmax=5.5, ymin=23, ymax=28) +
   geom_segment(aes(x=4.8, y=2, xend=4.8, yend=22), color="#bc5090") +
   geom_segment(aes(x=4.8, y=22, xend = 5.2, yend=22), color="#bc5090", 
-               arrow = arrow(length = unit(0.1, "cm"))) 
-
-#Add labels to plot 
-p3 + labs(title = "100 Influential & Inspiring Women in 2020",
+               arrow = arrow(length = unit(0.1, "cm"))) +
+  labs(title = "100 Influential & Inspiring Women in 2020",
        subtitle = "This year, BBC News honored 100 women leaders, intellectuals, activists, and creatives.\nThey left a space, called Unsung Hero, to recognize the unsung heroines worldwide.",
-       caption = "Created by @eliane_mitchll | Source: BBC News | #TidyTuesday Week 50 | See Github for Icons") 
-     theme(axis.title.x = element_blank(),
+       caption = "Created by @eliane_mitchll | Source: BBC News | #TidyTuesday Week 50 | See Github for Icons")   
+
+#Format labels of plot 
+p3 + theme(axis.title.x = element_blank(),
            axis.text.y = element_text(size=7),
            axis.text.x = element_blank(),
-          axis.title.y = element_blank(),
-          axis.ticks.x = element_blank(),
-          text = element_text(family = "abril", size = 15)) +
+        axis.title.y = element_blank(),
+        axis.ticks.x = element_blank(),
+        text = element_text(family = "abril", size = 15)) +
     theme(plot.subtitle = element_text(family = "roboto slab", size = 8, hjust=0),
           plot.title = element_text(hjust = 0),
           plot.caption = element_text(size = 8),
@@ -92,14 +92,3 @@ p3 + labs(title = "100 Influential & Inspiring Women in 2020",
 # creativity by mynamepong from the Noun Project: https://thenounproject.com/icon/3017281/
 # Wonder Woman by Éléonore Sabaté from the Noun Project: https://thenounproject.com/icon/638563/
 # knowledge by Alena from the Noun Project: https://thenounproject.com/icon/2824220/
-
-      
-        
-
-  
-  
-  
-  
-  
-
-
