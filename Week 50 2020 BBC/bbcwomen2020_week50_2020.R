@@ -46,7 +46,7 @@ p2 <- ggplot(num_cat, aes(x = category_num, y = 1, fill = continent, width = .5)
 p3 <- ggplot(num_cat, aes(x = category_num, y = 1, fill = continent, width = .5)) + 
   geom_bar(stat = "identity", size = 1.5) 
 
-#Add icons to graph
+#load in icons
 image3 <- readPNG("/Users/eliane/Desktop/R Folder/Identity Icon.png") 
 id_icon <- rasterGrob(image3, interpolate=FALSE)
 image1 <- readPNG("/Users/eliane/Desktop/R Folder/Leadership Icon.png")
@@ -58,7 +58,7 @@ creativity_icon <- rasterGrob(image4, interpolate=FALSE)
 image5 <- readPNG("/Users/eliane/Desktop/R Folder/Wonderwoman.png")
 allwomen_icon <- rasterGrob(image5, interpolate=FALSE)
 
-#Add icons to graph and lines
+# Add icons to graph
 p3 <- p2 + annotation_custom(id_icon, xmin=2.5, xmax=3.5, ymin=16, ymax=21) +
   annotation_custom(leadership_icon, xmin=0.5, xmax=1.5, ymin=28, ymax=33) +
   annotation_custom(knowledge_icon, xmin=1.5, xmax=2.5, ymin=31.4, ymax=36.4) +
@@ -69,9 +69,9 @@ p3 <- p2 + annotation_custom(id_icon, xmin=2.5, xmax=3.5, ymin=16, ymax=21) +
                arrow = arrow(length = unit(0.1, "cm"))) +
   labs(title = "100 Influential & Inspiring Women in 2020",
        subtitle = "This year, BBC News honored 100 women leaders, intellectuals, activists, and creatives.\nThey left a space, called Unsung Hero, to recognize the unsung heroines worldwide.",
-       caption = "Created by @eliane_mitchll | Source: BBC News | #TidyTuesday Week 50 | See Github for Icons")   
+       caption = "Created by @eliane_mitchll | Source: BBC News | #TidyTuesday Week 50 | See Github for Icons")  
 
-#Format labels of plot 
+# Add labels to plot
 p3 + theme(axis.title.x = element_blank(),
            axis.text.y = element_text(size=7),
            axis.text.x = element_blank(),
@@ -88,7 +88,7 @@ p3 + theme(axis.title.x = element_blank(),
           legend.direction = "horizontal",
           legend.background = element_rect(fill = "papayawhip"))
           
-# Icon Citations
+#Icon Citations
 # creativity by mynamepong from the Noun Project: https://thenounproject.com/icon/3017281/
 # Wonder Woman by Éléonore Sabaté from the Noun Project: https://thenounproject.com/icon/638563/
 # knowledge by Alena from the Noun Project: https://thenounproject.com/icon/2824220/
