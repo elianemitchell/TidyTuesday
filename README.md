@@ -23,7 +23,7 @@ After beginning my concerted efforts to learn R in August of 2020 with DataCamp,
 
 ## Week 50: BBC Women of 2020 Data
 
-![./](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20BBC%20Women%202020.png)
+![./](https://raw.githubusercontent.com/elianemitchell/TidyTuesday/main/Week%2050%202020%20BBC/Tidy%20Tuesday%20Women%202.0%20plot.png)
 
 ---
 
