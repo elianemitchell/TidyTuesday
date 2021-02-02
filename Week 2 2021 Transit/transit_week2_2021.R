@@ -12,7 +12,7 @@ ny$year <- as.numeric(ny$year)
 ny$year <- as.numeric(ny$year)
 
 # make plot
-ggplot(data = data, aes(y = index, x=start_year, xend=end_year)) +
+ggplot(data = ny, aes(y = index, x=start_year, xend=end_year)) +
 
 # make dumbells
   geom_dumbbell(size = 5,
