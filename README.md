@@ -35,10 +35,10 @@ After beginning my concerted efforts to learn R in August of 2020 with DataCamp,
 
 ## Week 43: Great American Beer Festival Competition Data - [Code](https://github.com/elianemitchell/TidyTuesday/blob/main/Week%2043%202020%20Beer%20Awards/beerawards_week43_2020.R)
 
-![./](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Beer%20Awards%202.0.png)
+![./](https://raw.githubusercontent.com/elianemitchell/TidyTuesday/main/Week%2043%202020%20Beer%20Awards/Tidy%20Tuesday%20Beer%20Awards%202.0.png)
 
 ---
 
 ## Week 41: NCAA Women's Basketball Data - [Code](https://github.com/elianemitchell/TidyTuesday/blob/main/Week%2041%202020%20WNBA/wnba_week41_2020.R)
 
-![./](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/New%20Tidy%20Tuesday%20Basketball%20Plot%2011-15.png)
+![./](https://raw.githubusercontent.com/elianemitchell/TidyTuesday/main/Week%2041%202020%20WNBA/New%20Tidy%20Tuesday%20Basketball%20Plot%2011-15.png)
