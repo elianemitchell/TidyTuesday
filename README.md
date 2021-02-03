@@ -29,7 +29,7 @@ After beginning my concerted efforts to learn R in August of 2020 with DataCamp,
 
 ## Week 46: Pew Research Smartphone Adoption Data - [Code](https://github.com/elianemitchell/TidyTuesday/blob/main/Week%2046%202020%20Phone%20Data/phonedata_week46_2020.R)
 
-![./](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Phone%20Plot%202.0.png)
+![./](https://raw.githubusercontent.com/elianemitchell/TidyTuesday/main/Week%2046%202020%20Phone%20Data/Tidy%20Tuesday%20Phone%20Plot%202.0.png)
 
 ---
 
