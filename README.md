@@ -11,7 +11,7 @@ After beginning my concerted efforts to learn R in August of 2020 with DataCamp,
 
 ## Week 2: Transit Costs Project - [Code](https://github.com/elianemitchell/TidyTuesday/blob/main/Week%202%202021%20Transit/transit_week2_2021.R)
 
-![./](https://raw.githubusercontent.com/elianemitchell/mytidytuesdaycode/main/Tidy%20Tuesday%20Transit%20Plot.png)
+![./](https://raw.githubusercontent.com/elianemitchell/TidyTuesday/main/Week%202%202021%20Transit/Tidy%20Tuesday%20Transit%20Plot.png)
 
 ---
 
