@@ -3,6 +3,11 @@ My code and visualizations for #TidyTuesday, a weekly social project on Twitter 
 
 After beginning my concerted efforts to learn R in August of 2020 with DataCamp, I decided two months later to try my hand at visualizing data for others to see. Feedback is always welcomed!
 
+## Week 6: HBCU Enrollment
+![./](https://raw.githubusercontent.com/elianemitchell/TidyTuesday/main/Week%206%202021%20HBCU/HBCU%20Enrollment%20TidyTuesday%20Final2.png)
+
+---
+
 ## Week 4: Kenya Census - [Code](https://github.com/elianemitchell/TidyTuesday/blob/main/Week%204%202021%20Kenya/kenya_week4_2020.R) 
 
 ![./](https://raw.githubusercontent.com/elianemitchell/TidyTuesday/main/Week%204%202021%20Kenya/kenya%20disability%20image.png)
