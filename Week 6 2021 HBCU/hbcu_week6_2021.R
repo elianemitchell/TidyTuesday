@@ -19,19 +19,6 @@ colnames(hbcu_black) <- c("year", "total_enroll", "males", "females",
 # Save data frame
 # See original code for this kind of plot here! https://github.com/gkaramanis/tidytuesday/blob/master/2020-week08/food-consumption.R
 
-d <- hbcu_black %>% 
-  mutate(females_in_thousands = females/1000,
-         males_in_thousands = males/1000,
-         diff = round(females_in_thousands - males_in_thousands, 0)) %>%
-  select(year, females_in_thousands, males_in_thousands, diff) %>%
-    filter(year >= 2000) %>%
-    mutate(pos = -8:7) %>%
-    rowwise() %>%
-    mutate(
-      x = list(c(-2.5, 0, 0, -2.5)),
-      y = list(c(pos*4 - 1.4, pos*2 - 0.7, pos*2 + 0.7, pos*4 + 1.4))) %>% 
-    unnest(cols = c(x, y))
-
 d %>%
     ggplot() +
   # first rectangle
@@ -43,16 +30,16 @@ d %>%
     geom_rect(aes(xmin = 0, ymin = pos*2 - 0.75,
                   xmax = females_in_thousands/20, ymax = pos*2 + 0.75), 
               fill = "#aecdc2", color = NA) +
-  # male rectangle (to go on top)
+  # male rectangle
   geom_rect(aes(xmin = 0, ymin = pos*2 - 0.50,
                 xmax = males_in_thousands/20, ymax = pos*2 + 0.50), 
             fill = "#ffeb94", color = NA) +
   geom_text(aes(-3.25, pos*4, label = year), family = "Bebas Neue", 
-            color = "#FFFFFF", hjust = 0.5, size = 4, check_overlap = TRUE) +
+            color = "#FFFFFF", hjust = 0.5, size = 5, check_overlap = TRUE) +
   labs(title = "Black Student Enrollment at Historically Black Colleges & Universities",
        caption = "Created by @elianemitchll | Source: Data World | #TidyTuesday Week 6",
        subtitle = "<span style='color:#ffeb94;'>_Men_</span> and <span style='color:#c1e1dc;'>_Women_</span> in the thousands") +
-  theme(plot.title = element_text(hjust = .9, family = "Bebas Neue", size = 16, 
+  theme(plot.title = element_text(hjust = .9, family = "Bebas Neue", size = 18, 
                                   color = "white"),
         plot.caption = element_text(hjust = .9, family = "Bebas Neue", color="white"),
         plot.subtitle = element_markdown(hjust = .9, family = "Bebas Neue", color="white"), 
@@ -60,12 +47,13 @@ d %>%
         panel.background = element_rect(fill = "black"), 
         axis.text.x = element_blank(),
         axis.text.y = element_blank()) +
-  geom_rect(xmin=4, xmax=6, ymin=19, ymax=21, color = "black") +
-  geom_rect(xmin=6.5, xmax=8.5, ymin=19, ymax=21, color = "black") +
+  # rectangle for label
+  geom_rect(xmin=4, xmax=6, ymin=18.4, ymax=21.6, color = "black") +
+  geom_rect(xmin=6.5, xmax=8.5, ymin=18.4, ymax=21.6, color = "black") +
         geom_text(x = 7.5, y =20, label = "150,000", color="white", 
-                  family = "Bebas Neue", size = 3) +
+                  family = "Bebas Neue", size = 5) +
         geom_text(x=5, y=20, label = "100,000", color = "white",
-                  family = "Bebas Neue", size = 3)
+                  family = "Bebas Neue", size = 5) 
 
 ggsave("HBCU Enrollment TidyTuesday Last.png")
 
