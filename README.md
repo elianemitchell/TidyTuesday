@@ -42,7 +42,7 @@ After beginning my concerted efforts to learn R in August of 2020 with DataCamp,
 
 ![./](https://raw.githubusercontent.com/elianemitchell/TidyTuesday/main/Week%2043%202020%20Beer%20Awards/beer%20awards%20image.png)
 
----
+--- 
 
 ## Week 41: NCAA Women's Basketball Data - [Code](https://github.com/elianemitchell/TidyTuesday/blob/main/Week%2041%202020%20WNBA/wnba_week41_2020.R)
 
