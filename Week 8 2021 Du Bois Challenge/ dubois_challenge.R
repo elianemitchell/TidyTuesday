@@ -1,16 +1,12 @@
 library(tidyverse)
 library(showtext)
-font_add_google("Bahnschrift")
 showtext_auto()
 library(extrafont)
 font_import()
-library(sysfonts)
-y
+
 tuesdata <- tidytuesdayR::tt_load(2021, week = 8)
 freed_slaves <-tuesdata$freed_slaves
-View(freed_slaves)
-font_add_google("Octin Sports")
-# x = yime,
+
 
 data <- freed_slaves %>%
   group_by(Year) %>%
