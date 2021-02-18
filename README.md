@@ -6,6 +6,8 @@ After beginning my concerted efforts to learn R in August of 2020 with DataCamp,
 ## Week 8: Du Bois Challenge
 ![./](https://raw.githubusercontent.com/elianemitchell/TidyTuesday/main/Week%208%202021%20Du%20Bois%20Challenge/Screen%20Shot%202021-02-18%20at%2012.56.19%20AM.png)
 
+---
+
 ## Week 6: HBCU Enrollment - [Code](https://github.com/elianemitchell/TidyTuesday/blob/main/Week%206%202021%20HBCU/hbcu_week6_2021.R)
 ![./](https://raw.githubusercontent.com/elianemitchell/TidyTuesday/main/Week%206%202021%20HBCU/HBCU%20Enrollment%20TidyTuesday%20FINAL%20Bigger%20Text.png)
 
