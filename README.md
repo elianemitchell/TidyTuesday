@@ -4,7 +4,7 @@ My code and visualizations for #TidyTuesday, a weekly social project on Twitter 
 After beginning my concerted efforts to learn R in August of 2020 with DataCamp, I decided two months later to try my hand at visualizing data for others to see. Feedback is always welcomed!
 
 ## Week 8: Du Bois Challenge
-![./](https://raw.githubusercontent.com/elianemitchell/TidyTuesday/main/Week%208%202021%20Du%20Bois%20Challenge/Screen%20Shot%202021-02-18%20at%2012.56.19%20AM.png)
+![./]()
 
 ---
 
