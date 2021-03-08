@@ -3,6 +3,9 @@ My code and visualizations for #TidyTuesday, a weekly social project on Twitter 
 
 After beginning my concerted efforts to learn R in August of 2020 with DataCamp, I decided two months later to try my hand at visualizing data for others to see. Feedback is always welcomed!
 
+## Week 10: Superbowl Ads - [Code](https://github.com/elianemitchell/TidyTuesday/blob/main/Week%2010%202021%20Superbowl/superbowl_week10_2021.R)
+![./](https://github.com/elianemitchell/TidyTuesday/blob/main/Week%2010%202021%20Superbowl/Blue%20Superbowl.png)
+
 ## Week 8: Du Bois Challenge - [Code](https://github.com/elianemitchell/TidyTuesday/blob/main/Week%208%202021%20Du%20Bois%20Challenge/dubois_challenge.R)
 ![./](https://raw.githubusercontent.com/elianemitchell/TidyTuesday/main/Week%208%202021%20Du%20Bois%20Challenge/dubois_image.png)
 
